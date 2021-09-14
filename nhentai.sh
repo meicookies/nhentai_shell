@@ -29,7 +29,7 @@ if [[ -n "$thumbnail" ]]; then
   getnumidk=$(basename $(dirname $url_))
 
   for dwn in $(seq 1 $(echo "$thumbnail" | wc -l)); do
-  wget -q --show-progress -P $1 $letakpict/$getnumidk/$dwn.jpg &
+    wget -q --show-progress -P $1 $letakpict/$getnumidk/$dwn.jpg &
   done; wait
 
   echo -e "All done\nSaved into $1 directory"
